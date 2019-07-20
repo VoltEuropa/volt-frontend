@@ -31,9 +31,9 @@ height: 4.5rem;
 }
 
 .logo img {
-position: fixed;
+position: absolute;
 display: block;
-top: 2rem;
+top: 1.7rem;
 left: 2rem;
 width: 50px;
 }
