@@ -1,7 +1,7 @@
 
 export const state = () => ({
   list: [],
-  car: {},
+  page: {},
 });
 
 export const mutations = {
@@ -23,7 +23,10 @@ export const mutations = {
   }
 };
 
+
+
 export const actions = {
+
   async get({ commit }) {
 
     let pages = [
@@ -56,7 +59,49 @@ export const actions = {
         "fields": {
           // ...
         }
-      }
+      },{
+        "id": 1230,
+        "slug": "lorem-ipsum",
+        "title": "Loorem van Ipsum",
+        "language": "en",
+        "meta": {
+          "title": "Loorem van Ipsum SEO Title",
+          "description": "Lekker Loorem van Ipsum",
+          "og:image": "https://example.org/og-image.jpg",
+          // ...
+        },
+        "fields": {
+          // ...
+        }
+      },{
+        "id": 1230,
+        "slug": "lorem-ipsum",
+        "title": "Very English page",
+        "language": "en",
+        "meta": {
+          "title": "Loorem van Ipsum SEO Title",
+          "description": "Lekker Loorem van Ipsum",
+          "og:image": "https://example.org/og-image.jpg",
+          // ...
+        },
+        "fields": {
+          // ...
+        }
+      },{
+        "id": 1230,
+        "slug": "lorem-ipsum",
+        "title": "Lorem FRKN Ipsum",
+        "language": "en",
+        "meta": {
+          "title": "Loorem van Ipsum SEO Title",
+          "description": "Lekker Loorem van Ipsum",
+          "og:image": "https://example.org/og-image.jpg",
+          // ...
+        },
+        "fields": {
+          // ...
+        }
+      },
     ]
 
     commit('set', pages)
@@ -68,6 +113,7 @@ export const actions = {
     //     }
     //   })
   },
+
   async show({ commit }, params) {
     await this.$axios.get(`/cars/${params.car_id}`)
       .then((res) => {
@@ -76,6 +122,7 @@ export const actions = {
         }
       })
   },
+
   async set({ commit }, cars) {
     await commit('set', cars)
   },
@@ -95,3 +142,11 @@ export const actions = {
     return this.$axios.delete(`/cars/${params.id}`)
   }
 };
+
+export const getters = {
+  
+  getByLanguage: (state) => (language) => {
+    return state.list.filter(page => page.language == language)
+  }
+
+}
