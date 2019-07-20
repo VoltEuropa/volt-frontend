@@ -1,0 +1,23 @@
+{
+  "name": "volt-frontend",
+  "version": "1.0.0",
+  "description": "The generic multilang front-end for Volt websites",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VoltEuropa/volt-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VoltEuropa/volt-frontend/issues"
+  },
+  "homepage": "https://github.com/VoltEuropa/volt-frontend#readme",
+  "dependencies": {
+    "nuxt": "^2.8.1",
+    "nuxt-i18n": "^6.0.0"
+  }
+}
