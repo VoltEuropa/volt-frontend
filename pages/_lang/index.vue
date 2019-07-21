@@ -2,7 +2,7 @@
   <h1>
     <h1>SOrry</h1>
     <ul>
-        <li v-for="page in pages" v-bind:key="page.slug">{{page}}</li>
+        <li v-for="page in pages" v-bind:key="page.slug">{{page.title}}</li>
     </ul>
   </h1>
 
@@ -13,7 +13,7 @@ export default {
   async fetch({ store }) {
     await store.dispatch("pages/get");
   },
-  
+
 
   created () {
       console.log(this.$store);
@@ -27,7 +27,7 @@ export default {
         return this.$store.site.object
     }
   }
-  
+
 
 };
 </script>

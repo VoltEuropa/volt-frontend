@@ -1,6 +1,6 @@
 
 export const state = () => ({
-  list: [],
+  list: []
 });
 
 export const mutations = {
@@ -22,11 +22,12 @@ export const mutations = {
 };
 
 
+
 export const actions = {
 
   async get({ commit }) {
 
-    let pages = [
+    let sites = [
       {
         "id": 1230,
         "slug": "lorem-ipsum",
@@ -101,14 +102,14 @@ export const actions = {
       },
     ]
 
-    commit('set', pages)
+    commit('set', sites)
   },
 };
 
 export const getters = {
 
   getByLanguage: (state) => (language) => {
-    return state.list.filter(page => page.language == language)
+    return state.list.filter(site => site.language == language)
   }
 
 }
