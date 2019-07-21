@@ -109,6 +109,10 @@ export const getters = {
 
   getByLanguage: (state) => (language) => {
     return state.list.filter(page => page.language == language)
+  },
+
+  getBySlug: (state) => (slug) => {
+    return state.list.filter(page => page.slug == slug)
   }
 
 }

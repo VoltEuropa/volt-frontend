@@ -1,7 +1,6 @@
 <template>
   <h1>
     <h1>{{page.title}}</h1>
-    <p>{{$store.state.site.site}}</p>
     <ul>
         <li v-for="page in pages" v-bind:key="page.slug">{{page}}</li>
     </ul>
