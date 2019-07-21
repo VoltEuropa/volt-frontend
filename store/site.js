@@ -16,7 +16,7 @@ export const mutations = {
 export const actions = {
 
   async nuxtServerInit({ commit, dispatch }, { req }) {
-    console.log(req.headers);
+    // console.log(req.headers);
     await dispatch('get')
   },
 

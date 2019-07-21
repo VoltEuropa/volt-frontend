@@ -15,13 +15,9 @@ export default {
     return store.dispatch("pages/get")
       .then( store.dispatch("site/get") )
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> 101f8a68bf72d1802bea06d06868432432334210
 
   created () {
-      console.log(this.$store);
+      // console.log(this.$store);
   },
 
   computed: {
