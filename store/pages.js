@@ -1,28 +1,25 @@
 
 export const state = () => ({
   list: [],
-  page: {},
 });
 
 export const mutations = {
-
-  set(state, car) {
-    state.list = car
+  set(state, value) {
+    state.list = value
   },
   add(state, value) {
     merge(state.list, value)
   },
-  remove(state, { car }) {
-    state.list.filter(c => car.id !== c.id)
+  remove(state, { value }) {
+    state.list.filter(v => value.id !== v.id)
   },
-  mergeCars(state, form) {
-    assign(state.car, form)
+  mergeValues(state, form) {
+    assign(state.value, form)
   },
-  setCars(state, form) {
-    state.car = form
+  setValues(state, form) {
+    state.value = form
   }
 };
-
 
 
 export const actions = {
@@ -105,46 +102,11 @@ export const actions = {
     ]
 
     commit('set', pages)
-
-    // await this.$axios.get(`/cars`)
-    //   .then((res) => {
-    //     if (res.status === 200) {
-    //       commit('set', res.data)
-    //     }
-    //   })
   },
-
-  async show({ commit }, params) {
-    await this.$axios.get(`/cars/${params.car_id}`)
-      .then((res) => {
-        if (res.status === 200) {
-          commit('mergeCars', res.data)
-        }
-      })
-  },
-
-  async set({ commit }, cars) {
-    await commit('set', cars)
-  },
-  async form({ commit }, form) {
-    await commit('mergeCars', form)
-  },
-  async add({ commit }, car) {
-    await commit('add', car)
-  },
-  create({ commit }, params) {
-    return this.$axios.post(`/cars`, { car: params })
-  },
-  update({ commit }, params) {
-    return this.$axios.put(`/cars/${params.id}`, { car: params })
-  },
-  delete({ commit }, params) {
-    return this.$axios.delete(`/cars/${params.id}`)
-  }
 };
 
 export const getters = {
-  
+
   getByLanguage: (state) => (language) => {
     return state.list.filter(page => page.language == language)
   }

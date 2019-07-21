@@ -3,7 +3,7 @@
     <h1>SOrry</h1>
     <p>{{$store.state.site.site}}</p>
     <ul>
-        <li v-for="page in pages" v-bind:key="page.slug">{{page}}</li>
+        <li v-for="page in pages" v-bind:key="page.slug">{{page.title}}</li>
     </ul>
   </h1>
 
@@ -15,6 +15,10 @@ export default {
     return store.dispatch("pages/get")
       .then( store.dispatch("site/get") )
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 101f8a68bf72d1802bea06d06868432432334210
 
   created () {
       console.log(this.$store);

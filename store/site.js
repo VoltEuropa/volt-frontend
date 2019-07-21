@@ -30,7 +30,7 @@ export const actions = {
       "menus": {
         "header": [
           {
-            "slug": "lorem-ipsum",
+            "slug": "loremipsum",
             "site_id": 1,
             "nl": {
               "id": 1230,
