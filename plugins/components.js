@@ -1,9 +1,7 @@
-const voltComponents = require('volt-components')
+//const voltComponents = require('volt-components')
 
-console.log(voltComponents);
+//console.log(voltComponents);
 
-let kees = voltComponents.uppercase('kees')
+//let kees = voltComponents.uppercase('kees')
 
-console.log(kees);
-
-
+//console.log(kees);
