@@ -15,9 +15,9 @@ export default {
     return store.dispatch("pages/get")
       .then( store.dispatch("site/get") )
   },
-  
+
   created () {
-      console.log(this.$store);
+      // console.log(this.$store);
   },
 
   computed: {
