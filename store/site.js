@@ -94,6 +94,7 @@ export const actions = {
         }
       ]
     }
+    
     commit('set', site)
 
   },
@@ -101,7 +102,7 @@ export const actions = {
 
 export const getters = {
 
-  getByLanguage: (state) => (language) => {
+  get: (state) => (language) => {
     return state.list.filter(page => page.language == language)
   }
 
